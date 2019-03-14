@@ -1,0 +1,466 @@
+/* Fonts */
+
+@font-face {
+	font-family: Bebasneue; 
+	src: url(./assets/fonts/bebasneue_bold.otf); 
+	font-weight: 700
+}
+@font-face {
+	font-family: Bebasneue; 
+	src: url(./assets/fonts/bebasneue_regular.otf); 
+	font-weight: 500
+}
+@font-face {
+	font-family: Bebasneue; 
+	src: url(./assets/fonts/bebasneue_light.otf); 
+	font-weight: 400
+}
+@font-face {
+	font-family: Bebasneue; 
+	src: url(./assets/fonts/bebasneue_thin.otf); 
+	font-weight: 300
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: Bebasneue;
+	font-weight: 500;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+.wrapper {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+
+.banner {
+	background: linear-gradient(#a81414 50%, #ffffff 50%);
+	background-size: 100% 147px;
+	height: 950px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.banner-content {
+	color: #ffffff;
+	background: #a81414;
+	padding: 40px 20px 40px 20px;
+	text-align: center;
+	
+}
+.banner-title {
+	font-size: 180px;
+	text-transform: uppercase;
+	font-weight: bold;
+	height: 150px;
+}
+
+.banner-subtitle {
+	font-family: 'Roboto', sans-serif;
+	font-size: 28px;
+}
+
+.menu {
+	background: linear-gradient(#a81414 50%, #ffffff 50%);
+	background-size: 100% 53px;
+	z-index: 1000;
+	
+}
+.menu-container {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+.header-title {
+	font-weight: bold;
+	font-size: 80px;
+	display: inline;
+	color: #ffffff;
+	padding: 0 10px;
+	text-transform: uppercase;
+	background: #a81414;
+}
+
+.fixed-header {
+	width: 100%;
+}
+.propose .wrapper {
+	padding: 40px 20px;
+}
+
+.propose-content {
+	display: flex;
+	position: relative;
+	align-items: center;
+}
+
+
+.propose-left {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 100px;
+}
+.propose-left p{
+	font-size: 70px;
+	text-transform: uppercase;
+}
+.propose-percent {
+	color: #a81414;
+	font-size: 170px !important;
+}
+.propose-content-vertical {
+	width: .7em;
+	text-align: center;
+	word-wrap: break-word;
+	position: absolute;
+	font-size: 43px !important;
+	top: 0;
+	right: -30px;
+}
+.propose-line {
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	width: 10px;
+	left: -50px;
+}
+.propose-line::after{
+	position: absolute;
+	top: 0px;
+	width: 4px;
+	content: '';
+	background: #a81414;
+	height: 100%;
+	left: calc(50%);
+	transform: translateX(-50%);
+}
+
+.propose-right {
+	position: relative;
+	max-width: 600px;
+	width: 100%;
+	font-family: Roboto, sans-serif;
+}
+
+.propose-right-title{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 35px;
+	margin-bottom: 20px;
+	font-family: Bebasneue, sans-serif;
+}
+
+.propose-right p {
+	text-align: justify;
+	margin-bottom: 20px;
+	line-height: 28px;
+}
+
+.propose-right p:last-child{
+	margin-bottom: 0;
+}
+
+/* delivery */
+
+.delivery .wrapper {
+	padding: 0 20px;
+}
+
+.delivery-title{
+	text-transform: uppercase;
+	font-size: 45px;
+	font-weight: bold;
+	margin-right: 40px;
+}
+.delivery-title-content {
+	display: flex;
+}
+.delivery-subtitle {
+	flex: 1;
+	line-height: 26px;
+	max-width: 600px;
+	width: 100%;
+}
+
+/* OCTAGON */
+.octagon-container {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	padding: 70px 0;
+	height: 480px;
+}
+.octagonWrap-1 {
+	width:150px;
+	height:150px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.octagon-1 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	transform: rotate(45deg);
+	background: #a81414;
+	border: 3px solid #a81414;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+.octagon-1:before {
+	position: absolute;
+	top: -3px; right: -3px; bottom: -3px; left: -3px;
+	transform: rotate(45deg);
+	content: '';
+	border: inherit;
+}
+.octagon-wrapper {
+	position: relative;
+}
+.octagon-content {
+		position: absolute;
+		width: 100%;
+		z-index: 10;
+		color: #fff;
+		top: 50%;
+		text-align: center;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		-webkit-transform: translate(-50%,-50%);
+		-moz-transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+		-o-transform: translate(-50%,-50%);
+}
+.octagon-content h4 {
+	font-size: 36px;
+	margin-bottom: 3px;
+}
+.octagon-content img {
+	width: 40px;
+	margin-top: 8px;
+}
+
+.second-octagonWrap {
+	position: absolute;
+	right: -118px;
+	top: 48px;
+}
+
+.second-octagon {
+	background: #fff;
+	border: 2px solid black;
+}
+.second-octagon:before {
+	top: -2px;
+	right: -2px;
+	bottom: -2px;
+	left: -2px;
+}
+
+.second-octagon-content {
+	color: black !important;
+}
+
+
+.octagon-image-cont-2 img {
+	position: relative;
+  right: 20px;
+}
+
+/* 3 octagon */
+.third-octagonWrap {
+	position: absolute;
+	top: 163px;
+	left: 170px;
+}
+
+/* 4 octagon */
+.fourth-octagonWrap {
+	position: absolute;
+	top: 280px;
+  left: 120px;
+	z-index: 101;
+}
+
+.fourth-octagon {
+	background: #fff;
+	border: 2px solid black;
+}
+
+.fourth-octagon:before {
+	top: -2px;
+	right: -2px;
+	bottom: -2px;
+	left: -2px;
+}
+
+.fourth-octagon-content {
+	color: black;
+
+}
+
+
+.octagon-image-cont-3 img{
+	position: relative;
+	left: 22px;
+}
+
+
+/* 5 octagon */
+.five-octagonWrap {
+	position: absolute;
+	bottom: 0;
+	z-index: 102;
+
+}
+.five-octagon-content p{
+	max-width: 95px;
+	margin: 0 auto;
+}
+
+/* 6 octagon */
+.six-octagonWrap {
+	position: absolute;
+	bottom: 60px;
+	z-index: 102;
+	left: -120px;
+	top: 280px;
+
+}
+
+.six-octagon {
+	border: 2px solid black;
+	background: #fff;
+}
+.six-octagon:before {
+	top: -2px;
+	right: -2px;
+	bottom: -2px;
+	left: -2px;
+}
+
+.six-octagon-content {
+	color: black;
+
+}
+
+.six-octagon-content h4 {
+	position: relative;
+	left: 18px;
+}
+
+/* 7 octagon */
+.seven-octagonWrap {
+	position: absolute;
+	top: 163px;
+	left: -170px;
+	z-index: 105;
+
+}
+.seven-octagon-content p{
+	max-width: 95px;
+	margin: 0 auto;
+}
+.seven-octagon-content h4 {
+	position: relative;
+	right: 20px;
+}
+
+
+/* 8 octagon */
+.eight-octagonWrap {
+	position: absolute;
+	z-index: 102;
+	right: 118px;
+	top: 48px;
+	z-index: 110;
+}
+
+.eight-octagon {
+	border: 2px solid black;
+	background: #fff;
+}
+.eight-octagon:before {
+	top: -2px;
+	right: -2px;
+	bottom: -2px;
+	left: -2px;
+}
+
+.eight-octagon-content {
+	color: black;
+
+}
+
+.eight-octagon-content h4 {
+	position: relative;
+	left: 18px;
+}
+
+.octagon-name {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	font-size: 36px;
+	width: 100%;
+	text-align: center;
+	font-weight: 600;
+}
