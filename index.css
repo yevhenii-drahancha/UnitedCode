@@ -49,10 +49,41 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+	scroll-behavior: smooth;
+}
 body {
 	line-height: 1;
 	font-family: Bebasneue;
 	font-weight: 500;
+	
+}
+p::selection{
+	background: red;
+}
+a::selection{
+	background: red;
+}
+h1::selection{
+	background: red;
+}
+h2::selection{
+	background: red;
+}
+h3::selection{
+	background: red;
+}
+h4::selection{
+	background: red;
+}
+img::selection{
+	background: red;
+}
+span::selection{
+	background: red;
+}
+i::selection{
+	background: red;
 }
 ol, ul {
 	list-style: none;
@@ -83,7 +114,7 @@ table {
 .banner {
 	background: linear-gradient(#a81414 50%, #ffffff 50%);
 	background-size: 100% 147px;
-	height: 950px;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -131,7 +162,10 @@ table {
 	width: 100%;
 }
 .propose .wrapper {
-	padding: 40px 20px;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	height: 100vh;
 }
 
 .propose-content {
@@ -212,6 +246,10 @@ table {
 
 .delivery .wrapper {
 	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
 }
 
 .delivery-title{
@@ -239,11 +277,13 @@ table {
 	height: 480px;
 }
 .octagonWrap-1 {
+	cursor: pointer;
 	width:150px;
 	height:150px;
 	float: left;
 	position: relative;
 	overflow: hidden;
+	z-index: 101;
 }
 .octagon-1 {
 	position: absolute;
@@ -292,11 +332,41 @@ table {
 	width: 40px;
 	margin-top: 8px;
 }
+#hidden-line-1 {
+	display: none;
+	position: absolute;
+	height: 2px;
+	width: 350px;
+	background: black;
+	top: 10px;
+	z-index: 100;
+	left: 100px;
+}
+#hidden-line-1::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: '';
+	background: black;
+	width: 2px;
+	height: 30px;
+}
+
+#hidden-content-1 {
+	text-align: start;
+	position: absolute;
+	top: 63px;
+	right: -462px;
+	max-width: 250px;
+	display: none;
+}
 
 .second-octagonWrap {
 	position: absolute;
 	right: -118px;
 	top: 48px;
+	z-index: 102;
+	cursor: pointer;
 }
 
 .second-octagon {
@@ -320,11 +390,64 @@ table {
   right: 20px;
 }
 
+#hidden-line-2 {
+	display: none;
+	position: relative;
+	height: 2px;
+	width: 100px;
+	background: black;
+	top: 105px;
+	z-index: 101;
+	right: -250px;
+}
+
+
+#hidden-content-2 {
+	text-align: start;
+	position: absolute;
+	top: 63px;
+	right: -462px;
+	max-width: 250px;
+	display: none;
+}
+
+
+
 /* 3 octagon */
 .third-octagonWrap {
 	position: absolute;
 	top: 163px;
 	left: 170px;
+	cursor: pointer;
+	z-index: 102;
+}
+
+#hidden-line-3 {
+	display: none;
+	position: relative;
+	height: 100px;
+	width: 2px;
+	background: black;
+	top: 90px;
+	right: -300px;
+}
+#hidden-line-3::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	background: black;
+	width: 60px;
+	height: 2px;
+}
+
+#hidden-content-3 {
+	text-align: start;
+	position: absolute;
+	top: 63px;
+	right: -462px;
+	max-width: 250px;
+	display: none;
 }
 
 /* 4 octagon */
@@ -332,7 +455,8 @@ table {
 	position: absolute;
 	top: 280px;
   left: 120px;
-	z-index: 101;
+	z-index: 102;
+	cursor: pointer;
 }
 
 .fourth-octagon {
@@ -357,7 +481,24 @@ table {
 	position: relative;
 	left: 22px;
 }
+#hidden-line-4 {
+	display: none;
+	position: relative;
+	height: 2px;
+	width: 100px;
+	background: black;
+	top: 350px;
+	right: -250px;
+}
 
+#hidden-content-4 {
+	text-align: start;
+	position: absolute;
+	bottom: 63px;
+	right: -462px;
+	max-width: 250px;
+	display: none;
+}
 
 /* 5 octagon */
 .five-octagonWrap {
@@ -370,6 +511,35 @@ table {
 	max-width: 95px;
 	margin: 0 auto;
 }
+#hidden-line-5 {
+	display: none;
+	position: absolute;
+	height: 2px;
+	width: 350px;
+	background: black;
+	bottom: 10px;
+	z-index: 100;
+	right: 100px;
+}
+#hidden-line-5::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: '';
+	background: black;
+	width: 2px;
+	height: 30px;
+}
+
+#hidden-content-5 {
+	text-align: end;
+	position: absolute;
+	bottom: 63px;
+	left: -462px;
+	max-width: 250px;
+	display: none;
+}
+
 
 /* 6 octagon */
 .six-octagonWrap {
@@ -378,7 +548,7 @@ table {
 	z-index: 102;
 	left: -120px;
 	top: 280px;
-
+	cursor: pointer;
 }
 
 .six-octagon {
@@ -402,13 +572,32 @@ table {
 	left: 18px;
 }
 
+#hidden-line-6 {
+	display: none;
+	position: relative;
+	height: 2px;
+	width: 100px;
+	background: black;
+	top: 350px;
+	left: -200px;
+}
+
+#hidden-content-6 {
+	text-align: end;
+	position: absolute;
+	bottom: 63px;
+	left: -462px;
+	max-width: 250px;
+	display: none;
+}
+
 /* 7 octagon */
 .seven-octagonWrap {
 	position: absolute;
 	top: 163px;
 	left: -170px;
 	z-index: 105;
-
+	cursor: pointer;
 }
 .seven-octagon-content p{
 	max-width: 95px;
@@ -419,9 +608,54 @@ table {
 	right: 20px;
 }
 
+#hidden-line-7 {
+	display: none;
+	position: relative;
+	height: 100px;
+	width: 2px;
+	background: black;
+	top: 90px;
+	left: -150px;
+}
+#hidden-line-7::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: '';
+	background: black;
+	width: 60px;
+	height: 2px;
+}
+
+#hidden-content-7 {
+	text-align: end;
+	position: absolute;
+	top: 63px;
+	left: -462px;
+	max-width: 250px;
+	display: none;
+}
+
+.hidden-title {
+	font-weight: 500;
+	font-size: 32px;
+}
+.hidden-text {
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+
+}
+.hidden-text p {
+	margin-bottom: 10px;
+}
+.hidden-text p:last-child {
+	margin-bottom: 0;
+}
 
 /* 8 octagon */
 .eight-octagonWrap {
+	cursor: pointer;
 	position: absolute;
 	z-index: 102;
 	right: 118px;
@@ -450,6 +684,25 @@ table {
 	left: 18px;
 }
 
+#hidden-line-8 {
+	display: none;
+	position: relative;
+	height: 2px;
+	width: 100px;
+	background: black;
+	top: 105px;
+	left: -200px;
+}
+
+#hidden-content-8 {
+	text-align: end;
+	position: absolute;
+	top: 63px;
+	left: -462px;
+	max-width: 250px;
+	display: none;
+}
+
 .octagon-name {
 	position: absolute;
 	top: 50%;
@@ -463,4 +716,210 @@ table {
 	width: 100%;
 	text-align: center;
 	font-weight: 600;
+}
+.form {
+	padding: 50px 0;
+}
+.form .wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.form-container {
+	background: #a81414;
+	padding: 20px;
+	width: 650px;
+}
+.input-container {
+	color: #fff;
+	display: flex;
+	margin-bottom: 12px;
+	justify-content: space-between;
+}
+.input-container:last-child{
+	margin-bottom: 0;
+}
+
+.input-container p {
+	margin-right: 20px;
+	text-align: end;
+	max-width: 250px;
+	width: 100%;
+}
+.input-container input {
+	width: 400px;
+	height: 20px;
+	padding: 0 5px;
+}
+
+.tabs-section .wrapper {
+	padding: 0 20px;
+	display: flex;
+	height: 100vh;
+	align-items: center;
+}
+
+.tabs-container {
+	display: flex;
+}
+
+.tab {
+	width: 200px;
+	display: flex; 
+	flex-direction: column;
+	border-right: 4px solid #a81414;
+	margin-right: 50px;
+}
+.tab-item {
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.tab-item p {
+	font-size: 32px;
+	position: relative;
+	display: inline;
+}
+
+.tab-item p:after {
+	position: absolute;
+	content: '';
+	background: black;
+	height: 1px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+.tab-item.active {
+	border-bottom: 3px solid #a81414;
+}
+
+.tab-item.active p {
+	background: #a81414;
+	color: #fff;
+}
+
+.tab-item.active p:after{
+	display: none;
+}
+
+
+/* tab-item */
+.tab-item-title {
+	display: flex;
+	font-size: 36px;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+.tab-item-title p {
+	font-family: Roboto, sans-serif;
+	font-size: 18px;
+	font-style: italic;
+}
+
+.tab-item-subtitle {
+	font-size: 16px;
+	font-family: Roboto, sans-serif;
+	line-height: 22px;
+}
+
+.red {
+	color: #a81414;
+}
+.title-1 {
+	font-weight: 600;
+	font-size: 20px;
+	margin: 8px 0;
+}
+.gray {
+	color: gray;
+}
+
+.title-1 i {
+	font-family: Roboto, sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	font-style: italic;
+}
+.dot {
+	width: 5px;
+	height: 5px;
+	background: black;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	margin-right: 5px;
+}
+.tabs-content{
+	display: flex;
+	align-items: center;
+}
+.tabs-content .list {
+	font-family: Roboto, sans-serif;
+	list-style: disc;
+	line-height: 22px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+.lates-content .title-2{
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+.lates-content p {
+	font-family: Roboto, sans-serif;
+	line-height: 22px;
+	margin-bottom: 8px;
+}
+.lates-content p:last-child {
+	margin-bottom: 0;
+}
+
+.navigation {
+	display: flex;
+	transform: rotateZ(90deg);
+	z-index: 1000;
+}
+
+.navigation a {
+	margin-right: 20px;
+	color: black;
+	font-size: 24px;
+	text-decoration: none;
+	position: relative;
+}
+.navigation a.current {
+	color: #a81414;
+}
+.navigation a.current::after{
+	position: absolute;
+	top: -5px;
+	left: 0;
+	content: '';
+	background: #a81414;
+	width: 100%;
+	height: 2px;
+}
+.navigation a:last-child {
+	margin-right: 0;
+}
+
+.submit-form {
+	text-align: end;
+}
+.submit-form button {
+	background: transparent;
+	color: #fff;
+	font-size: 22px;
+	border: none;
+	font-family: Bebasneue, sans-serif;
+	font-weight: 500;
+	text-decoration: underline;
 }
