@@ -20,17 +20,19 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('scroll', function() {
-    if (window.pageYOffset > navigationPosition - 300) {
+    if (window.pageYOffset > navigationPosition) {
         navigation.classList.remove('static-nav')
         navigation.classList.add('fixed-nav')
-        navigation.style.position = 'fixed';
+      /*   navigation.style.position = 'fixed';
         navigation.style.top = '50%';
-        navigation.style.right = '0'
+        navigation.style.right = '0' */
         
     } else {
+        navigation.classList.remove('fixed-nav')
         navigation.classList.add('static-nav')
-        navigation.style.position = 'absolute';
+       /*  navigation.style.position = 'absolute';
         navigation.style.top = '';
-        navigation.style.right = '0'
+        navigation.style.right = '0' */
     }
 });
+

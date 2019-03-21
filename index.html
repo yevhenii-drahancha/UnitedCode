@@ -27,6 +27,12 @@
       </div>
     </div>
     <div class="wrapper">
+        <div class="navigation">
+            <a href="#section-1">Main</a>
+            <a href="#section-2">How it works</a>
+            <a href="#section-3">lorem ipsum</a>
+            <a href="#section-4">subscribe</a>
+          </div>
       <div class="propose-content">
           <div class="propose-left">
               <p>us delivery</p>
@@ -52,12 +58,7 @@
           </p>
         </div>
       </div>
-      <div class="navigation">
-        <a href="#section-1">Main</a>
-        <a href="#section-2">How it works</a>
-        <a href="#section-3">lorem ipsum</a>
-        <a href="#section-4">subscribe</a>
-      </div>
+      
     </div>
   </section>
   <section class="delivery" id="section-2">
@@ -72,9 +73,10 @@
       <div class="octagon-container">
         <!-- octagon 1 -->
         <div 
-        
           class="octagon-wrapper">
             <div 
+            id="open"
+            onclick="showMobileContent(event, 'mobile-el-1')"
             onmouseleave="document.getElementById('hidden-line-1').style.display = 'none'; document.getElementById('hidden-content-1').style.display = 'none'"
             onmouseover="document.getElementById('hidden-line-1').style.display = 'block';document.getElementById('hidden-content-1').style.display = 'block'"  
             class='octagonWrap-1'>
@@ -98,9 +100,10 @@
             </div>
             <!-- octagon 2 -->
             <div 
-            onmouseleave="document.getElementById('hidden-line-2').style.display = 'none'; document.getElementById('hidden-content-2').style.display = 'none'"
-            onmouseover="document.getElementById('hidden-line-2').style.display = 'block';document.getElementById('hidden-content-2').style.display = 'block'"
-            class='octagonWrap-1 second-octagonWrap'>
+              onclick="showMobileContent(event, 'mobile-el-2')"
+              onmouseleave="document.getElementById('hidden-line-2').style.display = 'none'; document.getElementById('hidden-content-2').style.display = 'none'"
+              onmouseover="document.getElementById('hidden-line-2').style.display = 'block';document.getElementById('hidden-content-2').style.display = 'block'"
+              class='octagonWrap-1 second-octagonWrap'>
               <div class="octagon-content second-octagon-content">
                 <h4>02</h4>
                 <p>Client assessmen nneds</p>
@@ -123,6 +126,7 @@
               </div>
             <!-- octagon 3 -->
             <div 
+              onclick="showMobileContent(event, 'mobile-el-3')"
               onmouseleave="document.getElementById('hidden-line-3').style.display = 'none'; document.getElementById('hidden-content-3').style.display = 'none'"
               onmouseover="document.getElementById('hidden-line-3').style.display = 'block';document.getElementById('hidden-content-3').style.display = 'block'"
               class='octagonWrap-1 third-octagonWrap'>
@@ -147,6 +151,7 @@
               </div>
               <!-- octagon 4 -->
               <div 
+                onclick="showMobileContent(event, 'mobile-el-4')"
                 onmouseleave="document.getElementById('hidden-line-4').style.display = 'none'; document.getElementById('hidden-content-4').style.display = 'none'"
                 onmouseover="document.getElementById('hidden-line-4').style.display = 'block';document.getElementById('hidden-content-4').style.display = 'block'"
                 class='octagonWrap-1 fourth-octagonWrap'>
@@ -160,7 +165,7 @@
               <div id="hidden-line-4"></div>
             <div id="hidden-content-4">
               <div class="hidden-title">
-                Best vendor selection (Price, time zone, etc.)
+                contract signing with united code
               </div>
               <div class="hidden-text">
                 <p>Lorem ipsum dolordis, corrupti fugiat dolor doloremque aliquam quae nesciunt debitis ab voluptas!</p>
@@ -168,6 +173,7 @@
             </div>
               <!-- octagon 5 -->
               <div 
+              onclick="showMobileContent(event, 'mobile-el-5')"
               onmouseleave="document.getElementById('hidden-line-5').style.display = 'none'; document.getElementById('hidden-content-5').style.display = 'none'"
               onmouseover="document.getElementById('hidden-line-5').style.display = 'block';document.getElementById('hidden-content-5').style.display = 'block'"
                 class='octagonWrap-1 five-octagonWrap'>
@@ -191,6 +197,7 @@
             </div>
             <!-- octagon 6 -->
             <div 
+            onclick="showMobileContent(event, 'mobile-el-6')"
             onmouseleave="document.getElementById('hidden-line-6').style.display = 'none'; document.getElementById('hidden-content-6').style.display = 'none'"
             onmouseover="document.getElementById('hidden-line-6').style.display = 'block';document.getElementById('hidden-content-6').style.display = 'block'"
             class='octagonWrap-1 six-octagonWrap'>
@@ -212,6 +219,7 @@
             </div>
             <!-- octagon 7 -->
             <div 
+              onclick="showMobileContent(event, 'mobile-el-7')"
               onmouseleave="document.getElementById('hidden-line-7').style.display = 'none'; document.getElementById('hidden-content-7').style.display = 'none'"
               onmouseover="document.getElementById('hidden-line-7').style.display = 'block';document.getElementById('hidden-content-7').style.display = 'block'"
               class='octagonWrap-1 seven-octagonWrap'>
@@ -235,11 +243,12 @@
           
             <!-- octagon 8 -->
             <div class='octagonWrap-1 eight-octagonWrap'
+              onclick="showMobileContent(event, 'mobile-el-8')"
               onmouseleave="document.getElementById('hidden-line-8').style.display = 'none'; document.getElementById('hidden-content-8').style.display = 'none'"
               onmouseover="document.getElementById('hidden-line-8').style.display = 'block';document.getElementById('hidden-content-8').style.display = 'block'">
                 <div class="octagon-content eight-octagon-content">
                   <h4>08</h4>
-                  <p>communication establishment between client and vendor</p>
+                  <p>project fulfillment</p>
                   <img src="./images/balance-black.png" alt="">
                 </div>
                 <div class='octagon-1 eight-octagon'></div>
@@ -259,6 +268,91 @@
             </h3>
         </div>
         
+      </div>
+      <div 
+        id="mobile-el-1"
+        class="mobileElement">
+          <div class="mobile-title">
+            First kick off session for client vendor
+          </div>
+          <div class="mobile-text">
+            <p>Lorem ipsum dolordis, corrupti fugiat dolor doloremque aliquam quae nesciunt debitis ab voluptas!</p>
+            <p>Lorem ipsum dolor, scimus fugiat? Aliquam ex animi odit exercitationem ipsam hic unde numquam nihil quibusdam amet quod quas vitae officia labore?</p>
+          </div>
+      </div>
+      <div 
+        id="mobile-el-2"
+        class="mobileElement">
+        <div class="mobile-title">
+          Best vendor selection (Price, time zone, etc.)
+        </div>
+        <div class="mobile-text">
+          <p>Lorem ipsum dolordis, corrupti fugiat dolor doloremque aliquam quae nesciunt debitis ab voluptas!</p>
+        </div>
+      </div>
+      <div 
+        id="mobile-el-3"
+        class="mobileElement">
+        <div class="mobile-title">
+          First kick off session for client vendor
+        </div>
+        <div class="mobile-text">
+          <p>Lorem ipsum dolordis, corrupti fugiat dolor doloremque aliquam quae nesciunt debitis ab voluptas!</p>
+          <p>Lorem ipsum dolor, scimus fugiat? Aliquam ex animi odit exercitationem ipsam hic unde numquam nihil quibusdam amet quod quas vitae officia labore?</p>
+        </div>
+      </div>
+      <div 
+        id="mobile-el-4"
+        class="mobileElement">
+        <div class="mobile-title">
+          Best vendor selection (Price, time zone, etc.)
+        </div>
+        <div class="mobile-text">
+          <p>Lorem ipsum dolordis, corrupti fugiat dolor doloremque aliquam quae nesciunt debitis ab voluptas!</p>
+        </div>
+      </div>
+      <div 
+        id="mobile-el-5"
+        class="mobileElement">
+        <div class="mobile-title">
+          First kick off session for client vendor
+        </div>
+        <div class="mobile-text">
+          <p>Lorem ipsum dolordis, corrupti fugiat dolor doloremque aliquam quae nesciunt debitis ab voluptas!</p>
+          <p>Lorem ipsum dolor, scimus fugiat? Aliquam ex animi odit exercitationem ipsam hic unde numquam nihil quibusdam amet quod quas vitae officia labore?</p>
+        </div>
+      </div>
+      <div 
+        id="mobile-el-6"
+        class="mobileElement">
+        <div class="mobile-title">
+          Best vendor selection (Price, time zone, etc.)
+        </div>
+        <div class="mobile-text">
+          <p>Lorem ipsum dolordis, corrupti fugiat dolor doloremque aliquam quae nesciunt debitis ab voluptas!</p>
+        </div>
+      </div>
+      <div 
+        id="mobile-el-7"
+        class="mobileElement">
+        <div class="mobile-title">
+          First kick off session for client vendor
+        </div>
+        <div class="mobile-text">
+          <p>Lorem ipsum dolordis, corrupti fugiat dolor doloremque aliquam quae nesciunt debitis ab voluptas!</p>
+          <p>Lorem ipsum dolor, scimus fugiat? Aliquam ex animi odit exercitationem ipsam hic unde numquam nihil quibusdam amet quod quas vitae officia labore?</p>
+        </div>
+      </div>
+      <div 
+        id="mobile-el-8"
+        class="mobileElement">
+        <div class="mobile-title">
+          Best vendor selection (Price, time zone, etc.)
+        </div>
+        <div class="mobile-text">
+          <p>Lorem ipsum dolordis, corrupti fugiat dolor doloremque aliquam quae nesciunt debitis ab voluptas!</p>
+          <p>Lorem ipsum dolor, scimus fugiat? Aliquam ex animi odit exercitationem ipsam hic unde numquam nihil quibusdam amet quod quas vitae officia labore?</p>
+        </div>
       </div>
     </div>
   </section>
@@ -517,6 +611,7 @@
     </div>
   </section>
 
+  <script src="./mobile-showcontent.js"></script>
   <script src="./scroll.js"></script>
   <script src="./sticky.js"></script>
   <script src="./tabs.js"></script>
